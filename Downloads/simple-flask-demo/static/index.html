@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Simple Flask Demo</title>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Simple Flask Demo</h1>
+    <p>This static page is served by Flask. Use the buttons below to call the API.</p>
+
+    <div class="card">
+      <h2>GET /api/time</h2>
+      <button id="btnTime">Get Server Time</button>
+      <pre id="outTime" class="output"></pre>
+    </div>
+
+    <div class="card">
+      <h2>POST /api/echo</h2>
+      <textarea id="echoInput" placeholder='{"message":"hello"}'></textarea>
+      <button id="btnEcho">Send JSON</button>
+      <pre id="outEcho" class="output"></pre>
+    </div>
+
+    <div class="card">
+      <h2>Health Check</h2>
+      <code>GET /health</code>
+      <button id="btnHealth">Ping</button>
+      <pre id="outHealth" class="output"></pre>
+    </div>
+
+    <footer>
+      <small>Flask running on <code>PORT</code> (defaults to 5000). Frontend calls same-origin endpoints.</small>
+    </footer>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
